@@ -11,7 +11,9 @@ pool:
 
 steps:
 
-
+- task: Docker@2
+  inputs:
+    command: 'login'
 - task: Docker@2
   inputs:
     repository: 'ankit0rajput/test-node'
