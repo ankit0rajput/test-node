@@ -13,7 +13,9 @@ steps:
 
 - task: Docker@2
   inputs:
+    containerRegistry: 'docker-Hub-service'
     command: 'login'
+    
 - task: Docker@2
   inputs:
     repository: 'ankit0rajput/test-node'
