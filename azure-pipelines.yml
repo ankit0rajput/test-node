@@ -10,13 +10,10 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '20.x'
-  displayName: 'Install Node.js'
 
 
 - task: Docker@2
   inputs:
+    repository: 'ankit0rajput/test-node'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
