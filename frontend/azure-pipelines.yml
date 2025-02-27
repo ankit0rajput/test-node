@@ -10,7 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 variables:
-  imageName: 'Backend'
+  imageName: 'frontend'
   tag: '$(Build.BuildId)'
 
 steps:
@@ -27,4 +27,4 @@ steps:
     Dockerfile: '**/Dockerfile'
     tags: |
       $(tag)
-      Backend-$(tag)
+      Frontend-$(tag)
