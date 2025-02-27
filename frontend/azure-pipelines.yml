@@ -27,4 +27,4 @@ steps:
     Dockerfile: '**/Dockerfile'
     tags: |
       $(tag)
-      latest
+      Frontend-$(tag)
