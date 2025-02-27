@@ -9,6 +9,10 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+variables:
+  imageName: 'Backend'
+  tag: '$(Build.BuildId)'
+
 steps:
 
 - task: Docker@2
@@ -21,3 +25,6 @@ steps:
     repository: 'ankit0rajput/test-node'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
+    tags: |
+      $(tag)
+      Backend-$(tag)
